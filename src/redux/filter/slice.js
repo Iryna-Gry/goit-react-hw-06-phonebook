@@ -9,4 +9,8 @@ export const filterSlice = createSlice({
     },
   },
 });
+
 export const { setFilter } = filterSlice.actions;
+
+// Selectors
+export const getFilterValue = state => state.filter;

@@ -1,9 +1,9 @@
 import css from './SearchInput.module.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { setFilter } from 'redux/filter/slice';
+import { useDispatch, useSelector } from 'react-redux';
+import { setFilter, getFilterValue } from 'redux/filter/slice';
 export const SearchInput = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(state => state.filter);
+  const filter = useSelector(getFilterValue);
 
   return (
     <div className={css.Search__container}>
